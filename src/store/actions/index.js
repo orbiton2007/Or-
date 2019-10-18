@@ -1,6 +1,6 @@
 import axios from 'axios';
 import types from '../types';
-import StorageService from '../StorageService';
+import StorageService from '../storageService';
 
 const KEY = 'dEFgF8MWhHoAMR4GIXmXYdAot1SZjl5F';
 const KEY_LOCAL_STORAGE = 'favorites';
