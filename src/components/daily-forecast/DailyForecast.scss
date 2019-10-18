@@ -1,0 +1,30 @@
+.daily-forecast-container {
+  .daily-forecast {
+    width: max-content;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 0 2px black;
+
+    .weather-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .daily-forecast-container {
+    justify-content: center;
+
+    .daily-forecast {
+      width: max-content;
+      padding: 2px;
+
+      .weather-icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.navbar {
+  padding: 10px;
+  align-items: center;
+  border-bottom: black 0.5px solid;
+
+  .logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-list {
+    font-size: 1.3rem;
+
+    .link {
+        margin-left: 10px;
+
+      a {
+        color: rgb(73, 73, 73);
+        text-decoration: none;
+
+        &:hover{
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 850px) {
+  .navbar {
+    padding: 6px;
+  
+    .logo {
+      font-size: 1.3rem;
+    }
+  
+    .nav-list {
+      font-size: 1.1rem;
+      font-weight: 600;
+  
+      .link {
+          margin-left: 8px;
+      }
+    }
+  }
+}
