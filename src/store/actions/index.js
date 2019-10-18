@@ -7,14 +7,14 @@ const KEY_LOCAL_STORAGE = 'favorites';
 
 export const fetchLocations = searchText => async dispatch => {
   const response = await axios.get(
-    `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${KEY}&q=${searchText}&cors=true`
+    `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${KEY}&q=${searchText}&cors=true`
   );
   dispatch({ type: types.FETCH_LOCATIONS, payload: response });
 };
 
 export const fetchCurrWeather = locationKey => async dispatch => {
   const response = await axios.get(
-    `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${KEY}&cors=true`
+    `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${KEY}&cors=true`
   );
   dispatch({ type: types.FETCH_CURR_WEATHER, payload: response });
 };
@@ -28,14 +28,14 @@ export const selectLocation = location => {
 
 export const fetchFiveDayDailyForecast = locationKey => async dispatch => {
   const response = await axios.get(
-    `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${KEY}&cors=true`
+    `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${KEY}&cors=true`
   );
   dispatch({ type: types.FETCH_DAILY_FORECAST, payload: response });
 };
 
 export const fetchCurrLocation = (lat, lon) => async dispatch => {
   const response = await axios.get(
-    `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${KEY}&q=${lat}%2C${lon}&toplevel=true&cors=true`
+    `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${KEY}&q=${lat}%2C${lon}&toplevel=true&cors=true`
   );
   dispatch({ type: types.FETCH_CURRENT_LOCATION, payload: response });
 };
